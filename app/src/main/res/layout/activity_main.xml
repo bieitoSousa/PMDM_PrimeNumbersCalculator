@@ -1,9 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--
+    =   =   =   =   =   =   To Agrup    =   =   =   =   =   =   =
+     [ ]    FrameLayout (Esquina superior izquierda)
+     [*]    linearLayout [Vertical (arriba -> abajo) ]
+     [ ]    linearLayout [Horizontal (derecha -> izquierda)]
+     [ ]    RelativeLayout
+      =   =   =   =   =   =   Atributes    =   =   =   =   =   =   =
+     "match_parent"
+     "wrap_content"
+     =   =   =   =   =   =   Units    =   =   =   =   =   =   =
+     text           sp
+     elemets        dp
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,15 +32,62 @@
             app:popupTheme="@style/Theme.PrimeNumbersCalculator.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
+    <!--
+     =   =   =   =   =   =   Ingrar un layout   =   =   =   =   =   =   =
+     #  Crear layoutName.xml en la carpeta : app/src/main/res/layout
+     #  etiqueta:"include"   atributo:"layout" value:"@layout/layoutName"
+      <include layout="@layout/content_main" />
+    -->
 
-    <include layout="@layout/content_main" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold|italic"
+        android:textSize="60sp" />
+    <!-- android:text="header text" -->
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <TextView
+        android:id="@+id/textView_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:color="#ff8400"
+        android:textSize="20sp" />
+<!--        android:text="description text"-->
+
+
+    <EditText
+        android:id="@+id/editText_int_Input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+    <!-- android:hint="dime una posicion" -->
+
+
+    <Button
+        android:id="@+id/button_action_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"  />
+    <!--    android:text="calculate prime number"-->
+
+
+    <TextView
+        android:id="@+id/textView_request_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"/>
+    <!--    android:text="The prime number is : "-->
+
+
+
+</LinearLayout>
