@@ -8,7 +8,9 @@
                \nPor ejemplo, si deseas saber el sexto  número primo, pon el numero 6 y dale a calcular
                \nTe dirá que el sexto número primo es el 11.
     </string>
+    <string name="labelPosition"> Posicion : </string>
     <string name="button_action_calculate_text">Calcular!! </string>
-    <string name="postRequest">El primo numero </string>
-    <string name="preRequest"> es el : </string>
+    <string name="preRequest">El primo numero </string>
+    <string name="postRequest"> es el : </string>
+    <string name="errorEntero"> introduce un numero entero </string>
 </resources>
